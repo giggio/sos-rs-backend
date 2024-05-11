@@ -1,0 +1,74 @@
+@host = localhost:4000
+
+###
+
+### Usuários
+
+# Cadastrar um novo usuário.
+POST http://{{host}}/users
+###
+
+# Atualizar um usuário existente.
+PUT http://{{host}}/users
+###
+
+### Sessões
+
+# Criar uma nova sessão de usuário (login).
+POST http://{{host}}/sessions
+###
+
+# Obter detalhes de uma sessão.
+@sessionId = 123
+GET http://{{host}}}/sessions/{{sessionId}}
+###
+
+# Atualizar uma sessão específica.
+@sessionId = 456
+PUT http://{{host}}/sessions/{{sessionId}}
+###
+
+### Abrigos
+
+# Cadastrar um novo abrigo.
+POST http://{{host}}/shelters
+###
+
+# Atualizar um abrigo existente.
+@shelterId = 1
+PUT http://{{host}}/shelters/{{shelterId}}
+###
+
+# Listar abrigos.
+GET http://{{host}}/shelters
+###
+
+### Suprimentos
+
+# Cadastrar um novo item de suprimento.
+POST http://{{host}}/supply
+###
+
+# Atualizar um suprimento.
+@supplyId = 1
+PUT http://{{host}}/supplies/{{supplyId}}
+###
+
+# Listar suprimentos.
+GET http://{{host}}/supplies
+###
+
+### Categorias de Suprimentos
+
+# Cadastrar uma nova categoria de suprimentos.
+POST http://{{host}}/supply-categories
+###
+
+# Atualizar uma categoria de suprimentos.
+@categoryId = 1
+PUT http://{{host}}/supply-categories/{{categoryId}}
+###
+
+#Listar categorias de suprimentos.
+GET http://{{host}}/supply-categories
+###
